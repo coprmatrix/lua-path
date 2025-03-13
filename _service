@@ -29,7 +29,7 @@ if (index($_, 'version: ') == 0) {
     <service name="lua2pack_generate" mode="buildtime">
         <param name="rockspec">glob://./*.rockspec</param>
         <param name="template">generic.spec</param>
-        <param name="luacode">name=package</param>
+        <param name="luacode">name=package; noarch=true</param>
     </service>
     <service name="tar" mode="buildtime"/>
     <service name="recompress" mode="buildtime">
